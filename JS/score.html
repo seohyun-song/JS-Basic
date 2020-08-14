@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점 계산기</title>
+    <script>
+        var kor = Number(prompt('국어성적을 입력하세요.','숫자'));
+        var eng = Number(prompt('영어성적을 입력하세요.','숫자'));
+        var mat = Number(prompt('수학성적을 입력하세요.','숫자'));
+        var mean = (kor + eng + mat) / 3;
+
+        if (mean <= 20) {
+            alert('당신의 총 성적은 [가]입니다.');
+        } else if (mean <= 40) {
+            alert('당신의 총 성적은 [양]입니다.');
+        } else if (mean <= 60) {
+            alert('당신의 총 성적은 [미]입니다.');
+        } else if (mean <= 80) {
+            alert('당신의 총 성적은 [우]입니다.');
+        } else {
+            alert('당신의 총 성적은 [수]입니다.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
