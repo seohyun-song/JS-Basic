@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval()</title>
+    <script>
+        /*
+            setTimeout(function, millisecond): 일정 시간 후 함수를 한 번 실행
+            setInterval(function, millisecond): 일정 시간마다 함수를 반복해서 실행
+            setTimeout(), setInterval()함수 사용하면 타이머아이디를 리턴
+            이 아이디를 clearTimeout(), clearInterval()함수의 매개변수에 넣어주면 타이머 정지
+        */
+
+        //Run function per 1s
+        var intervalID = setInterval(function(){
+            alert('<p>'+new Date()+'</p>');
+        },1000);
+
+        //Run function after 10s
+        setTimeout(function(){
+            clearInterval(intervalID);
+        },10000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
