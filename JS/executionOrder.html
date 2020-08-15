@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Execution Order</title>
+    <script>
+        //js에서 for문의 var i 는 전역변수로서 사용가능
+        for(var i=0; i<3; i++) {
+            //js의 타이머함수와 웹 요청은 웹 브라우저가 처리하고 완료되면 js에게 알려주는 방식. 현재 단위가 끝나기 전에는 실행되지 않음
+            setTimeout(function (){
+                //alert(i) fetch
+                alert(i);
+            },0);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
