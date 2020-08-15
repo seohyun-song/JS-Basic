@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+    <script>
+        /*
+            클로져: 지역변수를 남겨둠.
+            해당 지역변수가 이후에 활용될 가능성이 있으므로 js가 변수를 제거하지 않고 남겨둠
+            *반드시 리턴된 클로져 함수를 사용해야 지역변수 output을 사용할 수 있음
+        */
+        function test(name) {
+            //지역변수는 함수가 실행될 때 생성되고 함수가 종료될 때 사라짐
+            var output = 'hello ' + name + '..!';
+            return function () {
+                alert(output);
+            };
+        }
+
+        test('JavaScript')();
+
+        var test_1 = test('Web');
+        //함수호출
+        test_1();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
