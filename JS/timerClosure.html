@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve execution order problem using closure</title>
+    <script>
+        //반복문을 도는 동안 클로져(지역변수를 남겨두는 현상)가 형성되어 변수closed_i에 값을 저장할 수 있음
+        for(var i =0; i<3; i++) {
+            //자기호출함수: 다른 개발자에게 영향을 주지 않게 생성하자마자 호출하여 사용
+            (function (closed_i){
+                setTimeout(function() {
+                    alert(closed_i);
+                },0);
+            })(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
