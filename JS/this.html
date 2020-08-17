@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+    <script>
+        var person = {
+            name : '윤인성',
+            eat : function(food) {
+                //자기 자신이 가진 속성이라는 것을 표시할 때 this키워드 사용. js에서 같은 객체내부에서 this키워드 생략불가능!
+                alert(this.name+'이 '+food+'을 먹습니다.');
+            }
+        }
+
+        //메서드를 호출
+        person.eat('밥');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
