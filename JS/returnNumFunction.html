@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parses a string and returns a number</title>
+    <script>
+        var won = '1000원';
+        var dollar = '1.5$';
+        //Number() 숫자로 변환할 수 없으면 NaN로 변환
+        alert(Number(won)+':'+Number(dollar));
+        
+        //parseInt(), parseFloat() 숫자로 변환할 수 있는 부분까지는 모두 숫자로 변환
+        alert(parseInt(won)+':'+parseInt(dollar));
+        alert(parseFloat(won)+':'+parseFloat(dollar));
+
+        //js는 0으로 시작하거나 0x로 시작하면 10진수가 아니라 각각 8진수, 16진수로 생각하고 변환
+        alert(parseInt('0x273'));
+
+        /*
+            0으로 시작한다면 8진 이거나 10진임. ES5는 10진이 사용되는 것을 명시하지만 모든 브라우저가 아직 이렇게 되지 않음!!!!
+            parseInt사용시 진법을 명시해야함
+        */
+        alert(parseInt('0273'));//273 or 187
+        alert(parseInt('0273',10));//273
+
+
+        //parseFloat() 중간에 e가 들어가면 자리수로 인식하는 오류있음
+        alert(parseFloat('52.273e5'))//5227300
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
