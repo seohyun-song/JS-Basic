@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve the execution order problem usting forEach() function.</title>
+    <script>
+        //calls a function once for each element in an array, in order.
+        [0, 1, 2].forEach(function(i){
+            setTimeout(function(){
+                alert(i);
+            },0);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
