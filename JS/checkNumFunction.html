@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Number function</title>
+    <script>
+        //js는 0으로 숫자를 나누면 infinity값이 들어감
+        var number = 1 / 0;
+        alert(number)
+        alert(number + ':'+isFinite(number));
+
+        var value = -10/0;//-infinity
+
+        //음수를 0으로 나누므로 -infinity -> 'Not Infinity' 무한수 확인시 반드시 isFinity()함수 사용
+        if(value == Infinity){
+            alert('Infinity');
+        } else {
+            alert('Not Infinity');
+        }
+
+        //NaN 스스로 비교 불가능. 반드시 isNaN()함수 사용
+        if(isNaN(NaN)){
+            alert('NaN == NaN');
+        } else {
+            alert('NaN !== NaN');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
