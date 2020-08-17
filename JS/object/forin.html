@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in</title>
+    <script>
+        var product = {
+            name : 'Microsoft Visual Studio 2012',
+            price : '15,000,000원',
+            language : 'korean',
+            supportOS : 'window 32/64',
+            subscription : true
+        }
+
+        var output = '';
+
+        //배열과 달리 단순 for반복문으로 객체의 속성을 살펴보는 것이 불가능. 객체의 속성을 모두 살펴보려면 for in반복문사용
+        for(var key in product) {
+            output += '*'+key+': '+product[key]+'\n';
+        }
+
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
