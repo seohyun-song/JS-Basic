@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object In</title>
+    <script>
+        var output = '';
+        var student = {
+            이름 : '연하진',
+            국어 : 92, 수학 : 98,
+            영어 : 96, 과학 : 98
+        };
+
+        //in키워드를 for키워드와 별도로 사용하면 해당 키가 객체안에 있는지 확인
+        output += "'이름' in student: "+ ('이름' in student) + '\n';
+        output += "'성별' in student: "+ ('성별' in student);
+
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
