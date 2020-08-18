@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Conflict</title>
+    <script>
+        var student = {
+            이름 : '연하진',
+            국어 : 92, 수학 : 98,
+            영어 : 96, 과학 : 98,
+            output : 'already here',
+            output2 : 'already'
+        };
+
+        /*
+            만약 with키워드를 사용하는 객체의 속성 이름과 외부변수의 이름이 같으면 충돌이 발생
+            이 경우 js는 객체의 속성을 우선시함 
+        */
+        var output = '';
+        with(student) {
+            output += '이름: '+이름+'\n';
+            output += '국어: '+국어+'\n';
+            output += '수학: '+수학+'\n';
+            output += '영어: '+영어+'\n';
+            output += '과학: '+과학+'\n';
+            output += '총점: '+(국어 + 수학 + 영어 + 과학);
+        }
+
+        alert(output);
+
+        //객체 속성이름과 외부의 변수이름이 같으면 window객체 내부의 변수를 사용하였다고 지정해줘야함
+        var output2 = '';
+        with(student) {
+            window.output2 += '이름: '+이름+'\n';
+            window.output2 += '국어: '+국어+'\n';
+            window.output2 += '수학: '+수학+'\n';
+            window.output2 += '영어: '+영어+'\n';
+            window.output2 += '과학: '+과학+'\n';
+            window.output2 += '총점: '+(국어 + 수학 + 영어 + 과학);
+        }
+
+        alert(output2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
