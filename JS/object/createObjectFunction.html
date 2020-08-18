@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Object Function</title>
+    <script>
+        //매개변수로 받아 객체를 만든 후 객체를 리턴. 실제로 생성자 함수를 사용하여 기능이 많은 객체를 쉽게 만들 수 있음
+        function makeStudent(name, korean, math, english, science) {
+            var willReturn = {
+                //속성
+                이름: name,
+                국어: korean,
+                수학: math,
+                영어: english,
+                과학: science,
+
+                //메서드
+                getSum: function() {
+                    return this.국어 + this.수학 + this.영어 + this.과학;
+                },
+
+                getAverage: function() {
+                    return this.getSum() / 4;
+                },
+
+                toString: function() {
+                    return this.이름+'\t'+this.getSum()+'\t'+this.getAverage();
+                }
+            };
+
+            return willReturn;
+        }
+
+        var students = [];
+        students.push(makeStudent('윤상현', 87, 98, 88, 95));
+
+        var output = '이름\t총점\t평균\n';
+        for(var i in students) {
+            output += students[i].toString()+'\n';
+        }
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
