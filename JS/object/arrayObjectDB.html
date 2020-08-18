@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Data usting Array and Object</title>
+    <script>
+        //학생 정보 배열 생성
+        var students = [];
+
+        //push() 배열에 요소 추가
+        students.push({ 이름: '윤인성', 국어: 87, 수학: 98, 영어: 88, 과학: 95});
+        students.push({ 이름: '연하진', 국어: 92, 수학: 98, 영어: 87, 과학: 86});
+        students.push({ 이름: '구지연', 국어: 76, 수학: 96, 영어: 68, 과학: 39});
+        students.push({ 이름: '나선주', 국어: 98, 수학: 92, 영어: 70, 과학: 77});
+        students.push({ 이름: '윤아린', 국어: 95, 수학: 98, 영어: 92, 과학: 88});
+        students.push({ 이름: '윤명월', 국어: 64, 수학: 88, 영어: 90, 과학: 20});
+        students.push({ 이름: '김미화', 국어: 82, 수학: 86, 영어: 100, 과학: 100});
+        students.push({ 이름: '김연화', 국어: 88, 수학: 74, 영어: 85, 과학: 98});
+        students.push({ 이름: '박아현', 국어: 97, 수학: 92, 영어: 84, 과학: 35});
+        students.push({ 이름: '서준서', 국어: 45, 수학: 52, 영어: 30, 과학: 87});
+
+        for(var i in students) {
+            //총점구하는 메서드를 추가
+            students[i].getSum = function() {
+                return this.국어 + this.수학 + this.영어 + this.과학;
+            }
+
+            //평균을 구하는 메서드를 추가
+            students[i].getAverage = function() {
+                return this.getSum() /4;
+            }
+        }
+
+        var output = '이름\t총점\t평균\n';
+        for(var i in students) {
+            with(students[i]) {
+                output += 이름+'\t'+getSum()+'\t'+getAverage()+'\n';
+            }
+        }
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
