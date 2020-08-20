@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <script>
+        function Student(name, kor, mat, eng, sci) {
+            this.이름 = name;
+            this.국어 = kor;
+            this.수학 = mat;
+            this.영어 = eng;
+            this.과학 = sci;
+        }
+
+        /*
+            prototype : 생성자 함수로 생성된 객체가 공통으로 가지는 공간. 메서드를 하나만 생성해도 
+            모든 객체가 해당 메서드를 사용할 수 있음. 생성자 함수로 객체를 만들 때는 생성자 함수 내부에 속성만 넣음
+            prototype은 js 모든 함수가 가지는 객체임
+        */
+        Student.prototype.getSum = function() {return this.국어 + this.수학 + this.영어 + this.과학;};
+        Student.prototype.getAverage = function() {return this.getSum() / 4;};
+        Student.prototype.toString = function() {return this.이름 + '\t'+ this.getSum() + '\t' +this.getAverage();};
+
+        var students = [];
+        students.push(new Student('윤하린', 96, 98, 92, 98));
+        students.push(new Student('연하진', 96, 96, 98, 92));
+
+        var output = '이름\t총점\t평균\n';
+        for(var i in students) {
+            output += students[i].toString()+'\n';
+        }
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

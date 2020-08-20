@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Function</title>
+    <script>
+        /*
+            Constructor function? new키워드로 객체를 생성할 수 있는 함수
+            생성자함수의 이름은 일반적으로 대문자로 시작!
+            생성자 함수 안에서 this키워드로 생성자 함수로 생성될 객체의 속성을 지정
+        */
+        function Student(name, kor, mat, eng, sci) {
+            this.이름 = name;
+            this.국어 = kor;
+            this.수학 = mat;
+            this.영어 = eng;
+            this.과학 = sci;
+
+            this.getSum = function() {
+                return this.국어 + this.수학 + this.영어 + this.과학;
+            };
+
+            this.getAverage = function() {
+                return this.getSum() / 4;
+            };
+
+            this.toString = function() {
+                return this.이름 + '\t'+ this.getSum() + '\t' +this.getAverage();
+            };
+        }
+        //Student()생성자함수로 student객체(인스턴스) 생성
+        var student = new Student('윤하린', 96, 98, 92, 98);
+
+        //해당 객체가 어떠한 생성자 함수로 생성됐는지 확인
+        alert(student instanceof Student);
+        alert(student instanceof Number);
+        alert(student instanceof String);
+        alert(student instanceof Boolean);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

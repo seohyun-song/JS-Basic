@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+    <script>
+        //캡슐화? 만일의 상황을 대비해서 특정 속성이나 메서드를 사용자가 사용할 수 없게 숨겨놓은 것
+        function Rectangle() {
+            var width = 0;
+            var height = 0;
+
+            this.getWidth = function() {return w;};
+            this.getHeight = function() {return h;};
+            this.setWidth = function(w) {
+                if(w<0) {
+                    //사용자 정의 예외를 던질 수 있음. 현재 함수의 실행이 중지되고(throw이후의 명령문은 실해되지 않음)
+                    throw alert('길이는 음수일 수 없습니다.');
+                } else {
+                    width = w;
+                }
+            };
+            this.setHeight = function(h) {
+                if(h<0) {
+                    throw alert('길이는 음수일 수 없습니다.');
+                } else {
+                    height = h;
+                }
+            };
+        }
+        Rectangle.prototype.getArea = function() {
+            return this.getWidth()*this.getHeight();
+        }
+
+        var rectangle = new Rectangle();
+        //get(), set()을 통해 변수를 사용할 수 있음
+        rectangle.setWidth(-2);
+
+        alert('area: '+rectangle.getArea());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
