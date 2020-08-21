@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive Data Type v.s Object </title>
+    <script>
+        var primitiveNumber = 273;
+        var objectNumber = new Number(273);
+
+        Number.prototype.method = function() {
+            return 'Method on prototype';
+        }
+
+        var output = '';
+        /*
+            기본 자료형에도 속성과 메소드가 있음. 기본 자료형의 속성이나 메서드 사용 시 자동으로 객체로 변환
+            ->객체의 일회용 옷을 입는 다고 생각! 기본 자료형에 직접 속성이나 메서드를 추가한 것이 아니라 
+            일회용 옷에 추가한 것임
+            기본 자료형은 객체가 아니므로 속성과 메서드를 추가할 수 없음!
+        */
+        output += primitiveNumber.method() + '\n';
+        output += objectNumber.method();
+
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
