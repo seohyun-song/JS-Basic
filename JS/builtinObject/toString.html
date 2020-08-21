@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toString()</title>
+    <script>
+        var object = new Object();
+        //toString() 객체를 문자열로 변환할 때 자동으로 호출됨
+        alert(object);
+        alert(object.toString());
+
+        var student = {
+            name: '윤명월',
+            grade: '대학교 1학년',
+            toString: function() {
+                return this.name+': '+this.grade;
+            }
+        };
+        /*
+            js는 객체를 문자열로 변환할 때 자동으로 toString()메서드를 호출함
+            alert([message]); message: 경고 대화 상자에 표시할 텍스트 문자열/ 문자열로 변환해 나타낼 객체
+        */
+        alert(student);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

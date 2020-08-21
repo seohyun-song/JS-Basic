@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+    <script>
+        var object = {property: 273};
+
+        var output = '';
+        //hasOwnProperty(): 객체가 name속성이 있는지 확인
+        output += "HOP('property'): "+ object.hasOwnProperty('property')+'\n';
+        output += "HOP('constructor'): "+ object.hasOwnProperty('constructor')+'\n';
+
+        //propertyIsEnumerable(): 반복문으로 열거할 수 있는지 확인->true로 가지는 속성만 for in반복문으로 출력
+        output += "PIE('property'): "+ object.propertyIsEnumerable('property')+'\n';
+        output += "PIE('constructor'): "+ object.propertyIsEnumerable('constructor')+'\n';
+
+        alert(output);
+
+        for(var key in object) {
+            alert(object[key]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

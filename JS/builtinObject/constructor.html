@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+    <script>
+        var numberFromLiteral = 273;
+        var numberFromObject = new Number(273);
+
+        if(typeof(numberFromLiteral) == 'number') {
+            alert('numberFromLiteral은 숫자입니다.');
+        }
+        //생성자 함수로 만든 숫자는 객체이므로 경고창 출력하지 않음
+        if(typeof(numberFromObject) == 'number') {
+            alert('numberFromObject은 숫자입니다.');
+        }
+        /*
+            constructor(): 객체의 생성자 함수
+            생성자 함수가 Number생성자 함수인지 비교하면 쉽게 숫자인지 구분할 수 있음
+        */
+        if(numberFromObject.constructor == Number) {
+            alert('numberFromObject는 숫자입니다.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
