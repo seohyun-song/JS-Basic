@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Prototype</title>
+    <script>
+        //Object는 모든 객체의 최상위 객체이므로 Object객체의 프로토타입에 속성/ 메서드 추가시 모든 객체에서 사용가능
+        Object.prototype.test = function() {
+            alert(this);
+        };
+
+        var number = 273;
+        number.test();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
