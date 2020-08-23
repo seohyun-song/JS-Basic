@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Object Method</title>
+    <script>
+        var number = 273.5210332;
+        // var number = new Number(273.5210332);
+
+        var output = '';
+        //tofixed: 소수점 몇 째 자리까지 나타낼 것인지
+        output += number.toFixed(1)+'\n';
+        output += number.toFixed(4);
+        alert(output);
+
+        //직접호출: 변수에 숫자를 넣지않아도 숫자가 곧바로 toFixed() 메서드를 호출함
+        var fixedNumber = (273.5210332).toFixed(2);
+        alert(fixedNumber);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
