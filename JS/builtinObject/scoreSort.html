@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's score sorting</title>
+    <script>
+        function Student(name, kor, mat, eng, sci) {
+            this.이름 = name;
+            this.국어 = kor;
+            this.수학 = mat;
+            this.영어 = eng;
+            this.과학 = sci;
+
+            this.getSum = function() {
+                return this.국어+this.수학+this.영어+this.과학;
+            };
+
+            this.getAverage = function() {
+                return this.getSum()/4;
+            };
+
+            this.toString = function() {
+                return this.이름+'\t'+this.getSum()+'\t'+this.getAverage();
+            };
+        }
+        var students = [];
+        students.push(new Student('윤인성', 87, 98, 88, 95));
+        students.push(new Student('연하진', 92, 98, 96, 98));
+        students.push(new Student('구지연', 76, 96, 94, 90));
+        students.push(new Student('나선주', 98, 92, 96, 92));
+
+        students.sort(function(a, b){
+            //내림차순정렬
+            return b.getSum()-a.getSum();
+        });
+        //slice메서드는 자기 자신을 변화시키지 않음
+        students = students.slice(0,3);
+
+        var output = '이름\t총점\t편균\n';
+        for(var i in students) {
+            output += students[i].toString()+'\n';
+        }
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
