@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object</title>
+    <script>
+        //Date객체 생성
+        var date = new Date();
+
+        //문자열을 사용한 Date객체 생성
+        var date = new Date('December 9');
+        var date = new Date('December 9, 1991');
+        var date = new Date('December 9, 1991 02:24:23');
+
+        /*
+            숫자를 사용한 Date객체 생성
+            연/월-1/일/시/분/초/밀리초 순으로 입력해 생성
+            *월을 입력하는 것이 아니라 월-1을 입력해야함!!!
+        */
+        var date = new Date(1991, 11, 9, 2, 24, 23, 1);
+
+        //현재 날짜, 시간 출력
+        alert(date);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
