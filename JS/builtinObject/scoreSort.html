@@ -37,6 +37,13 @@
         //slice메서드는 자기 자신을 변화시키지 않음
         students = students.slice(0,3);
 
+        /*
+            method chaining
+            students.sort(function(a, b){
+                return b.getSum()-a.getSum();
+            }).slice(0,3);
+        */
+
         var output = '이름\t총점\t편균\n';
         for(var i in students) {
             output += students[i].toString()+'\n';
