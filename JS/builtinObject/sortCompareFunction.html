@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort() compareFunction()</title>
+    <script>
+        var array = [52, 103, 273, 32];
+
+        /*
+            정렬기준은 매개변수로 입력한 함수가 리턴하는 숫자의 부호에 따라 정렬방식이 결정됨
+            오름차순 return a-b
+            내림차순 return b-a
+        */
+        array.sort(function(a,b) {
+            return a-b;
+        });
+        alert(array);
+
+        /*
+            내림차순정렬
+            array.sort(function(a,b) {
+                return b-a;
+            });
+        */
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
