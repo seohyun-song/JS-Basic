@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getDate() setDate()</title>
+    <script>
+        var date = new Date();
+        //getYear()메서드는 브라우저에 따라 조금씩 다른 결과 출력하므로 getFullYear()메서드를 사용하는 것이 좋음
+        var year = date.getFullYear();
+        
+        //현재 시간에서 7일을 더함
+        date.setDate(date.getDate()+7);
+
+        alert(date);
+        alert(year);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
