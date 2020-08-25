@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Interval</title>
+    <script>
+        var now = new Date();
+        var before = new Date('December 9, 1991');
+        
+        //getTime(): 1970년 1월 1일 00:00:00 UTC와 주어진 날짜 사이의 경과 시간(밀리초)을 나타내는 숫자
+        var interval = now.getTime() - before.getTime();
+        interval = Math.floor(interval/(1000*60*60*24));
+
+        alert('Interval: '+interval+'일');
+
+        //Date 생성자 함수의 프로토타입에 메서드를 추가
+        Date.prototype.getInterval = function(otherDate){
+            var interval;
+
+            //양수로 날짜 간격을 구하기 위해 조건문을 사용함
+            if(this>otherDate){
+                interval = this.getTime() - otherDate.getTime();
+            } else {
+                interval = otherDate.getTime() - this.getTime();
+            }
+
+            return Math.floor(interval/(1000*60*60*24));
+        }
+
+        alert('Interval: '+now.getInterval(before)+'일');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
