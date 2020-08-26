@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES5 Reduce()</title>
+    <script>
+        var array = [1, 2, 3, 4, 5];
+
+        var output = '';
+        /*
+            reduce(): 배열의 요소가 하나가 될 때 까지 요소를 왼쪽부터 두 개씩 묶는 함수
+            reduceRight(): 배열의 요소가 하나가 될 때 까지 요소를 오른쪽 부터 두 개씩 묶는 함수
+        */
+        array.reduce(function(previousValue, currentValue, index, array){
+            output += previousValue+' : '+currentValue+' : '+index+'\n';
+        });
+        alert(output);
+
+        var result = array.reduce(function(previousValue, currentValue, index, array){
+            return previousValue+currentValue;
+        });
+        alert(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
