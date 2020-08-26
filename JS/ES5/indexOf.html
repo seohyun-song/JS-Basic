@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES5 Array indexOf()</title>
+    <script>
+        var array = [1, 2, 3, 4, 5, 5, 4, 3, 2, 1];
+
+        //매개변수에 검색하려는 객체를 입력함. 내부에 검색하려는 객체가 있으면 해당 객체의 위치 인덱스 값 반환. 없으면 -1
+        var output1 = array.indexOf(4);
+        var output2 = array.indexOf(8);
+        var output3 = array.lastIndexOf(4);
+        var output4 = array.lastIndexOf(8);
+
+        var output = '';
+        output += output1+' : '+output2 +'\n';
+        output += output3+' : '+output4;
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
