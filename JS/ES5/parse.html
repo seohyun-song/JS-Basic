@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON.parse()</title>
+    <script>
+        var obj = {
+            name: '윤인성',
+            region: '서울특별시'
+        };
+        //JSON문자열을 JS객체로 반환
+        var copy = JSON.parse(JSON.stringify(obj));
+
+        alert(copy.name+' : '+copy.region);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
