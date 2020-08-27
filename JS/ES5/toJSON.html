@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toJSON()</title>
+    <script>
+        /*
+            JSON.stringify()메서드의 매개변수에 넣은 객체에 toJSON()메서드가 없다면 
+            객체 전체를 JSON으로 변환.
+            toJSON()메서드가 있다면 toJSON()메서드에서 리턴한 객체를 JSON으로 변환
+        */
+        var obj = {
+            name: 'obj',
+            prop: 'obj',
+            toJSON: function(){
+                return {
+                    custom: 'custom'
+                };
+            }
+        };
+
+        alert(JSON.stringify(obj));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
