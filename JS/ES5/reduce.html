@@ -9,7 +9,11 @@
 
         var output = '';
         /*
-            reduce(): 배열의 요소가 하나가 될 때 까지 요소를 왼쪽부터 두 개씩 묶는 함수
+            arr.reduce(function(acc, cur, currIndex, arr){}) 배열의 요소가 하나가 될 때 까지 요소를 두 개씩 묶는 함수
+            accumulator: 콜백의 반환값을 누적함. 콜백의 이전 반환값/ 콜백의 첫 번째 호출이면서 initialValye를 제공한 경우 initialValue임
+            currentValue: 처리할 현재 요소
+            currentIndex(optional): 처리할 현재 요소의 인덱스.initialValue를 제공한 경우 0아니면 1부터 시작
+            array(optional): reduce()를 호출한 배열
             reduceRight(): 배열의 요소가 하나가 될 때 까지 요소를 오른쪽 부터 두 개씩 묶는 함수
         */
         array.reduce(function(previousValue, currentValue, index, array){
