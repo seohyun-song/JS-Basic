@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+    <script>
+        //navigator객체는 웹페이지를 실행하고 있는 브라우저에 대한 정보가 있음
+        var output = '';
+        for(var key in navigator) {
+            output += '*'+key+': '+navigator[key]+'\n';
+        }
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
