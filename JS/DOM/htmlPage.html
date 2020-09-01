@@ -1,0 +1,23 @@
+<!--
+    문서객체모델은 넓은 의미로는 브라우저가 HTML페이지를 인식하는 방식, 좁은 의미로는 document객체와
+    관련된 객체의 집합
+    문서객체모델을 사용하면 HTML페이지에 태그를 추가, 수정, 제거 가능 
+    HTML페이지에 존재하는 태그를 자바스크립트에서 이용할 수 있는 객체로 만들면 그것이 '문서 객체' 이다.
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <script>
+        window.onload = function() {
+            //document객체의 getElementByID()메서드로 문서 객체를 자바스크립트로 가져와서 조작가능
+            var header = document.getElementById('header');
+        };
+    </script>
+</head>
+<body>
+    <header id="header">Header</header>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Document Object</title>
+    <script>
+        //동적 문서 객체 생성
+        window.onload = function() {
+            //요소노드 생성
+            var header = document.createElement('h1');
+            //텍스트노드 생성
+            var textNode = document.createTextNode('Hello DOM');
+
+
+            //생성한 문서객체를 body문서 객체에 연결하여 화면에 출력
+            header.appendChild(textNode);
+            document.body.appendChild(header);
+
+            /*
+                텍스트노드를 갖지 않는 노드생성방법. 텍스트노드 대신에 속성을 사용
+                다음의 방법은 웹 표준이 정의하거나 웹 브라우저가 지원하는 태그의 속성에만 사용가능
+            */
+            var img = document.createElement('img');
+            img.src = 'https://source.unsplash.com/E0Sbr9d1IV0';
+
+            //웹 브라우저가 지원하지 않는 속성은 메서드를 사용해야 넣을 수 있음
+            img.setAttribute('width', 960);
+            img.setAttribute('heigth',720);
+
+            
+            document.body.appendChild(img);
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
