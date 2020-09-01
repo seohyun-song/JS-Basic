@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_By _To</title>
+    <script>
+        var child = window.open('','','width=300, height=200');
+        //_To 절대적인 기준으로 속성을 변화함
+        child.moveTo(0, 0);
+
+        setInterval(function(){
+            //_Bt 현재 윈도우를  기준으로 상대적으로 속성을 변화함
+            child.moveBy(10, 10);
+        },1000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
