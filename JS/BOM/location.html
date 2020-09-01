@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <script>
+        //location객체는 브라우저의 주소 표지줄과 관련된 객체
+        var output = '';
+        for(var key in location) {
+            output += '*'+key+': '+location[key]+'\n';
+        }
+        alert(output);
+
+        //페이지 이동. replace->뒤로가기 버튼 사용안됨
+        location = 'http://www.naver.com';
+        location.href = 'http://www.naver.com';
+        location.assign('http://www.naver.com');
+        location.replace('http://www.naver.com');
+
+        //현재페이지 새로고침
+        location = location;
+        location.href = location.href;
+
+        location.assign(location);
+        locatino.replace(location);
+
+        location.reload();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
