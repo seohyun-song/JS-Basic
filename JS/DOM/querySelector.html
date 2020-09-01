@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector()</title>
+    <script>
+        window.onload = function() {
+            //css선택자로 문서객체를 선택하는 메서드. HTML5부터 추가됨
+            var header1 = document.querySelector('#header-1');
+            var header2 = document.querySelector('#header-2');
+
+            header1.innerHTML = 'with querySelector';
+            header2.innerHTML = 'with querySelector';
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header-1">Header</h1>
+    <h1 id="header-2">Header</h1>
+</body>
+</html>
