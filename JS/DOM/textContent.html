@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent</title>
+    <script>
+        window.onload = function() {
+            var output = '';
+            output += '<ul>';
+            output += ' <li>JavaScript</li>';
+            output += ' <li>jQuery</li>';
+            output += ' <li>Ajax</li>';
+            output += '</ul>';
+            
+            /*
+                HTML형태의 문자열을 HTML태그로 넣지 않고 단순 글자로 넣고 싶다면 textContent속성사용
+                *익스플로러 7이하에서는 지원하지 않음
+            */
+            document.body.textContent = output;
+        };
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
