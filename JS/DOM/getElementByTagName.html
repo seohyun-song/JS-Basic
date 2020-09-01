@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByTagName(tagName)</title>
+    <script>
+        window.onload = function() {
+            //변수 headers는 문서객체를 가지는 배열. HTML페이지의 h1태그가 순서대로 들어감
+            var headers = document.getElementsByTagName('h1');
+
+            //문서객체의 속성변경
+            // headers[0].innerHTML = 'with getElementByTagName()';
+            // headers[1].innerHTML = 'with getElementByTagName()';
+
+            //headers는 배열이므로 반복문을 사용할 수 있음. *for in 반복문은 사용하면 안됨
+            for(var i=0; i<headers.length; i++) {
+                headers[i].innerHTML = 'with getElementByTagName()';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>header</h1>
+    <h1>header</h1>
+</body>
+</html>
