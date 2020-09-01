@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style</title>
+    <script>
+        window.onload = function() {
+            var header = document.getElementById('header');
+            //문서객체의 style속성 사용하면 해당 문서객체의 스타일을 변경할 수 있음
+            header.style.border = '1px solid black';
+            header.style.color = 'orange';
+
+            var btn = document.getElementById('btn');
+            btn.onclick = function() {
+                header.style.color = 'red';
+            };
+        };
+
+    </script>
+</head>
+<body>
+    <h1 id="header">Header</h1>
+    <input type="button" value="click" id="btn">
+</body>
+</html>
