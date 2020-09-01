@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Open</title>
+    <script>
+        /*
+            open(URL, name, features, replace): 새로운 window객체를 생성
+            단지 팝업창을 여는 것외에도 윈도 객체를 리턴함. 따라서 새로운 윈도 객체에 
+            접근해 속성과 메서드를 사용할 수 있음
+        */
+        // window.open();
+        var child = window.open('http://www.naver.com','', 'width=600, height=300 location=no, menubar=no, resizable=no, status=no, toolbar=no',true);
+
+        //팝업차단해제
+        if(child) {
+            child.document.write('<h1>From parent window</h1>');
+        } else {
+            alert('팝업차단을 해제해주세요.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
