@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+    <script>
+        window.onload = function(){
+            document.getElementById('header').onclick = function() {
+                //this: 이벤트가 발생한 객체
+                this.style.color = 'red';
+                this.style.border = '1px dashed black';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">Click</h1>
+</body>
+</html>
