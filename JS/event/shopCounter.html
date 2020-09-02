@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var plus = document.getElementById('plus');
+            var minus = document.getElementById('minus');
+            var count = document.getElementById('count');
+
+            plus.onclick = function() {
+                count.innerHTML = Number(count.innerHTML) + 1;
+            };
+            minus.onclick = function() {
+                count.innerHTML = Number(count.innerHTML) - 1;
+            };
+        };
+    </script>
+</head>
+<body>
+    <button id="plus">+</button>    
+    <button id="minus">-</button>
+    <p>상품의 총 수량은 <span id="count">0</span>입니다.</p>
+</body>
+</html>
