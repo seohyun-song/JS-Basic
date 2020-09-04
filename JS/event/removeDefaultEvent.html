@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Default Event</title>
+    <script>
+        /*
+            유효성검사: 입력양식에 제대로 값이 들어갔는지 확인하는 것
+            디폴트 이벤트를 제거하기 위해서는 이벤트 리스너에게 false를 리턴해야함
+        */
+        window.onload = function() {
+            document.getElementById('my-form').onsubmit = function() {
+                // return false;
+                var pass = document.getElementById('pass').value;
+                var passCheck = document.getElementById('pass-check').value;
+
+                if(pass == passCheck) {
+                    alert('성공');
+                } else {
+                    alert('다시 입력해주세요');
+                    return false;
+                }
+            };
+        };
+    </script>
+
+    <script>
+        function whensSubmit() {
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <!--
+        일부 HTML태그는 이미 이벤트 리스너가 있습니다. 이러한 것을 디폴트 이벤트라고 합니다. 
+        입력양식의 submit은 입력양식을 제출하고 페이지를 새로고침하는 것이 디폴트 이벤트임
+    -->
+    <form id="my-form">
+        <label for="name">이름</label><br>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="pass">비밀번호</label><br>
+        <input type="password" name="pass" id="pass"><br>
+
+        <label for="pass-check">비밀번호 확인</label><br>
+        <input type="password" id="pass-check"><br>
+
+        <input type="submit" value="제출">
+    </form>
+
+    <!--
+        인라인 이벤트 디폴트이벤트 제거
+        이벤트 속성에 'return 함수()'형태를 입력해야함
+    -->
+    <form onsubmit="return whensSubmit()">
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
