@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Transfer</title>
+    <style>
+        * {border: 3px solid black;}
+    </style>
+    <script></script>
+</head>
+<body>
+    <!--
+        이벤트 전달: 어떠한 이벤트가 먼저 발생해 어떤 순서로 발생하는지를 나타냄
+        자바스크립트의 이벤트 전달 순서는 이벤트 버블링 방식을 따릅니다.
+        이번트 버블링: 자식 노드에서 부모 노드 순으로 이벤트를 실행하는 것.
+    -->
+    <div onclick="alert('outer div')">
+        <div onclick="alert('inner-div')">
+            <h1 onclick="alert('header')">
+                <p onclick="alert('paragraph')">paragraph</p>
+            </h1>
+        </div>
+    </div>
+
+</body>
+</html>
