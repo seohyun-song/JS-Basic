@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch구문을 사용한 이벤트 연결</title>
+    <script>
+        function registerEventListener(node, event, listener) {
+            try {
+                //파이어폭스, 크롬, 오페라, 사파리
+                node.addEventListener(event, listener, false);
+            } catch (exception) {
+                //인터넷 익스프로러
+                node.attachEvent('on'+event, listener);
+            }
+        }
+        window.onload = function() {
+            var header = document.getElementById('header');
+            registerEventListener(header, 'click',function(){
+                alert('Click');
+            });
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">Click</h1>
+</body>
+</html>

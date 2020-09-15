@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Selector</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //클래스 선택자는 특정한 class속성이 있는 문서 객체를 선택하는 선택자
+            $('.item').css('color','orange');
+            $('h1.item').css('background','green');
+
+            //두 클래스 속성을 모두 갖는 문서 객체를 선택하고 싶을 때는 두 클래스 선택자를 붙여서 사용
+            $('.item.select').css('border','3px solid black');
+        });
+    </script>
+</head>
+<body>
+    <h1 class="item">Header-0</h1>
+    <h1 class="item select">Header-1</h1>
+    <h1 class="item">Header-2</h1>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch Finally</title>
+    <script>
+        /*
+            고급 예외 처리: try키워드, catch키워드, finally키워드로 예외를 처리하는 방법
+            try구문 안에서 예외가 발생하면 이를 catch구문에서 처리함. finally구문은 필수 사항은 아니며 예외 발생 여부와 상관없이
+            수행돼야 하는 작업이 있을 때 사용함
+        */
+        try {
+            //변수willExcept존재하지 않는 예외 발생.try구문안에서 예외 발생 시 더이상 try구문을 진행하지 않음
+            willExcept.byeBye();
+            alert('try구문 종료');
+        } catch(exception){
+            alert('예외가 발생했습니다.');
+        }finally {
+            //try구문에서 예외가 발생하든 안하든 무조건 finally구문은 실행됨
+            alert('예외 발생 가능 부분을 통과했습니다.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

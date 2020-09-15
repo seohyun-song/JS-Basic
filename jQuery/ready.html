@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Ready</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        /*
+            $(document).ready()는 문서가 준비되면 매개변수로 넣은 콜백함수를 실행하라는 것
+            고전 이벤트 모델은 한 번에 하나의 이벤트만 연결할 수 있으나 
+            jQuery이벤트 메서드는 이벤트로 여러개 함수를 연결할 수 있음
+        */
+        $(document).ready(function(){
+            alert('First Ready');
+        });
+        $(document).ready(function(){
+            alert('Second Ready');
+        });
+        $(document).ready(function(){
+            alert('Third Ready');
+        });
+
+        /*
+            간단한 형식의 $(document).ready()
+            $(function(){
+
+            });
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
