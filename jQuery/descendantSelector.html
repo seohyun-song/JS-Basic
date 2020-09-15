@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>descendant Selector</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>    
+        /*
+            자손 선택자는 후손을 선택하는 선택자이며 '요소A  요소B'의 형태로 사용
+        */
+        $(document).ready(function(){
+            //body태그의 바로 밑 자손인 div만 선택됨
+            $('body  *').css('color','red');
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Apple</li>
+            <li>Bag</li>
+            <li>cat</li>
+            <li>dog</li>
+        </ul>
+    </div>
+    <div></div>
+</body>
+</html>

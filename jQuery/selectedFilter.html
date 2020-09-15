@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:selected</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            setTimeout(function(){
+                //:focus 초점이 맞추어져 있는 입력양식 선택
+                $('input:text:focus').css('background','red');
+
+                //:checked 체크되어 있는 입력양식을 선택
+                var value = $('input:checked').val();
+                alert(value);
+            },3000);
+        });
+    </script>
+</head>
+<body>
+    <input type="text">
+    <input type="checkbox" value="여자">
+</body>
+</html>

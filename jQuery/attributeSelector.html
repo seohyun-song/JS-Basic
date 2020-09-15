@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                속성선택자는 기본 선택자 뒤에 붙여서 사용. 입력양식과 관련된 태그를 선택할 때 사용
+                val()메서드는 매개변수를 입력하면 input태그의 value속성을 지정, 매개변수를 입력하지 않으면
+                value속성을 검사.
+            */
+            $('input[type="text"]').val('Hello jQuery..!');
+        });
+    </script>
+</head>
+<body>
+    <input type="text">
+    <input type="password">
+    <input type="radio">
+    <input type="checkbox">
+    <input type="file">
+</body>
+</html>

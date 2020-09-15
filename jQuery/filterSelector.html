@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Selector</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //5초 후에 코드를 실행
+            setTimeout(function(){
+                /*
+                    입력양식의 필터 선택자 ':'
+                    :selected option객체 중 선택된 태그를 선택함
+                */
+                var value = $('select>option:selected').val();
+
+                alert(value);
+            },5000);
+        });
+    </script>
+</head>
+<body>
+    <select>
+        <option>Apple</option>
+        <option>Cat</option>
+        <option>Dog</option>
+        <option>Bag</option>
+        <option>Elephant</option>
+    </select>
+</body>
+</html>
