@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trigger()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').click(function(){
+                $(this).html(function(index, html){
+                    return html+'*';
+                });
+            });
+
+            /*
+                trigger() 이벤트를 강제로 발생 시킴
+                $(selector).trigger(eventName)
+                $(selector).trigger(eventName, data) data는 일반적으로 배열을 집어 넣음
+            */
+            setInterval(function(){
+                // $('h1').last().trigger('click');
+                //trigger()메서드로 이벤트를 강제로 발생시킬 수도 있지만 간단한 이벤트 연결 방식을 사용할 수도 있음
+                $('h1').last().click();
+            },1000);
+        });
+    </script>
 </head>
 <body>
-    
+    <h1>Start: </h1>
+    <h1>Start: </h1>
 </body>
 </html>
