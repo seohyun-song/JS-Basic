@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //아직 jQuery가 canvas태그를 정식으로 지원하지 못함.따라서 getElementById()메서드를 사용해야함
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+
+
+            /*
+                기존 자바스크립트의 이벤트 객체는 브라우저 마다 사용 방법은 물론 이벤트 객체에 있는 속성조차 다름.
+                하지만 jQuery가 스스로 이벤트 객체를 정형화하므로 jQuery의 이벤트 객체는 모든 브라우저가 같은
+                방법으로 사용하고 같은 속성을 갖음
+            */
+            $(canvas).on({
+                mousedown: function(event){
+                    //위치를 얻어냄
+                    var position = $(this).offset();
+                    var x = event.pageX - position.left;
+                    var y = event.pageY - position.top;
+
+                    //선을 그림
+                    context.beginPath();
+                    context.moveTo(x,y);
+                },
+                mouseup: function(event){
+                    //위치를 얻어냄
+                    var position = $(this).offset();
+                    var x = event.pageX - position.left;
+                    var y = event.pageY - position.top;
+
+                    //선을 그림
+                    context.lineTo(x,y);
+                    context.stroke();
+                }
+            });
+        }); 
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="700" height="400" style="border: 3px solid black;"></canvas>
+</body>
+</html>
