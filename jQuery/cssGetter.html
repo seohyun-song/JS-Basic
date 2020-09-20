@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Getter</title>
+    <style>
+        .first {color: red;}
+        .second {color: pink;}
+        .third {color: orange;}
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                css() 스타일과 관련된 모든 기능을 수행. 
+                매개변수에 스타일 속성 이름을 입력하면 스타일 속성 값을 얻을 수 있음
+            */
+            var color = $('h1').css('color');
+            alert(color);
+        });
+    </script>
+</head>
+<body>
+    <h1 class="first">Header-0</h1>
+    <h1 class="second">Header-1</h1>
+    <h1 class="third">Header-2</h1>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Method Function</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                문서 객체 선택
+                filter() 메서드의 매개변수에 함수를 넣음. 이때 입력하는 함수는 매개변수로 index를 갖는다.
+                함수에서 리턴하는 값에 따라 문서객체를 선택함
+            */
+            $('h3').filter(function(index){
+                return index % 3 == 0;
+            }).css({
+                backgroundColor: 'black',
+                color: 'white'
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Header - 0</h3>
+    <h3>Header - 1</h3>
+    <h3>Header - 2</h3>
+    <h3>Header - 3</h3>
+    <h3>Header - 4</h3>
+    <h3>Header - 5</h3>
+</body>
+</html>

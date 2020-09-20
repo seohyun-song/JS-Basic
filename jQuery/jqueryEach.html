@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Each()</title>
+    <style>
+        .high-light-0 {background-color: yellow;}
+        .high-light-1 {background-color: green;}
+        .high-light-2 {background-color: blue;}
+        .high-light-3 {background-color: pink;}
+        .high-light-4 {background-color: gray;}
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').each(function(index, item){
+                $(this).addClass('high-light-'+index);
+            });
+
+            // $('h1').addClass(function(index){
+            //     return 'high-light-'+index;
+            // });
+        });
+    </script>
+</head>
+<body>
+    <h1>item - 0</h1>
+    <h1>item - 1</h1>
+    <h1>item - 2</h1>
+    <h1>item - 3</h1>
+    <h1>item - 4</h1>
+</body>
+</html>

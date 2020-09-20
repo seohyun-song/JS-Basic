@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Each()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //변수선언
+            var array = [
+                {name: 'Hanbit Media', link: 'http://hanb.co.kr'},
+                {name: 'Naver', link: 'http://naver.com'},
+                {name: 'Daum', link: 'http://daum.net'},
+                {name: 'Paran', link: 'http://paran.com'}
+            ];
+
+            /*
+                $.each() 메서드를 사용함
+                each() 메서드는 매개변수로 입력한 함수로 for in 반복문 처럼 객체나 배열의 요소를 검사하는 메서드
+                index->배열의 인덱스/ 객체의 키
+                item->해당 인덱스나 키가 가진 값
+
+                [].forEach(function (item, index){ });
+                $.each(function (index, item){ });
+            */
+            $.each(array, function(index, item){
+                var output = '';
+
+                output += '<a href="'+ item.link +'">';
+                output += ' <h1>'+ item.name +'</h1>';
+                output += '</a>';
+
+                document.body.innerHTML += output;
+            });
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

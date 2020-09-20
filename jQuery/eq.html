@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eq()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*  
+                eq() 선택한 요소의 인덱스 번호에 해당하는 요소를 찾음
+
+            */
+            $('h1').eq(0).css('background','orange');
+            $('h1').last().css('color','blue');
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Header-0</h1>
+        <h1>Header-1</h1>
+        <h1>Header-2</h1>
+    </div>
+</body>
+</html>

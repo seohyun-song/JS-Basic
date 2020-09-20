@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>off()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').click(function(){
+                $(this).html('CLICK');
+                alert('이벤트가 발생했습니다.');
+
+
+                /*
+                    off(): 이벤트를 제거함
+                    $(selector).off() 해당 문서 객체와 관련된 모든 이벤트를 제거
+                    $(selector).off(eventName) 해당 문서 객체의 특정 이벤트와 관련된 모든 이벤트를 제거
+                    $(selector).off(eventName, function) 특정 이벤트 리스너를 제거
+                */
+                $(this).off();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

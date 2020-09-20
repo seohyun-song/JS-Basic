@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Attribute</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                $(selector).attr(name, value);
+                $(selector).attr(name, function(index,attr){ });
+                $(selector).attr(object);
+            */
+            // $('img').attr('width',300);
+
+            // $('img').attr('width',function(index){
+            //     return (index + 1)*100;
+            // });
+
+            $('img').attr({
+                width: function(index){
+                    return (index + 1) * 100;
+                },
+                height: 100
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="img/img02.jpg">
+    <img src="img/img02.jpg">
+    <img src="img/img02.jpg">
+</body>
+</html>

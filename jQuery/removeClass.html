@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeClass()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                removeClass() 문서 객체의 클래스 속성을 제거함
+                메서드의 매개변수에 아무것도 입력하지 않으면, 문서 객체의 모든 클래스를 제거
+                toggleClass(): 매개변수로 입력한 클래스 속성이 이미 지정돼 있으면 제거 지정돼 있지 않으면 추가->드롭다운메뉴에 활용가능
+            */
+            $('h1').removeClass('select');
+        });
+    </script>
+</head>
+<body>
+    <h1 class="item">Header-0</h1>
+    <h1 class="item select">Header-1</h1>
+    <h1 class="item">Header-2</h1>
+</body>
+</html>

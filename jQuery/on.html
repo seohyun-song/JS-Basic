@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on() Event</title>
+    <style>
+        * {margin: 0; padding:0}
+        .reverse {color:white; background-color: black;}
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                on(): 이벤트 연결
+                $(selector).on(eventName, function(){ });
+                $(selector).on(objject);
+                이벤트 리스너 안에서 this는 이벤트가 발생한 객체
+             */
+            $('h1').on('click',function(){
+                $(this).html(function(index, html){
+                    return html+'+';
+                });
+            });
+
+            $('h1').on({
+                mouseenter: function(){$(this).addClass('reverse');},
+                mouseleave: function(){$(this).removeClass('reverse');}
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

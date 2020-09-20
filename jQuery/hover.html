@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover()</title>
+    <style>
+        .reverse {
+            background-color: black; 
+            color: white;
+        }
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                간단한 이벤트 연결 방법-> $(selector).method(function(event){ });
+                
+                hover -> mouseenter와 mouseleave 이벤트를 동시에 연결하는 메서드
+                $(selector).hover(function(event){ }, function(event){ });
+            */
+            $('h1').hover(function(){
+                $(this).addClass('reverse');
+            }, function(){
+                $(this).removeClass('reverse');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

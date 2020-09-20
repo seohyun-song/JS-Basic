@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Setter</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //text() HTML태그를 인식하지 않음
+            // $('div').html('<h1>$().html() Method</h1>');
+            // $('div').text('<h1>$().html() Method</h1>');
+
+            // $('div').html(function(index){
+            //     return '<h1>Header-'+index+'</h1>';
+            // });
+
+            //html()메서드의 매개변수로 입력하는 함수는 두 번째 매개변수로 원래있던 HTML내용물을 얻을 수 있음
+            $('h1').html(function(index, html){
+                return '*'+html+'*';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                $()메서드로 문서 객체를 생성할 수 있음
+                매개변수에 HTML태그를 문자열로 넣으면 문서 객체 생성
+            */
+            $('<h1></h1>').html('Hello World...!').appendTo('body');
+            // $('<h1>Hello World...!</h1>').appendTo('body');
+            
+            $('<img>').attr('src','img/img02.jpg').appendTo('body');
+            //attr()메서드를 사용하지 않아도 $()메서드의 두 번째 매개변수에 객체를 넣고 원하는 속성 입력하면 됨
+            $('<img>',{
+                src: 'img/img02.jpg',
+                width: 300,
+                height:300
+            }).appendTo('body');
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').each(function(){
+                /*
+                    is() 문서 객체의 특징을 판별
+                    매개변수로 선택자를 입력함. 선택한 객체가 선택자와 일치하는 지 판별하여 불을 리턴함
+                */
+                if($(this).is('.select')){
+                    $(this).css('background','orange');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 class="select">Header-0</h1>
+    <h1>Header-1</h1>
+    <h1 class="select">Header-2</h1>
+</body>
+</html>

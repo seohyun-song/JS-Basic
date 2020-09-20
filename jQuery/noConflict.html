@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noConflict()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        /*
+            jQuery이외에도 여러 자바스크립트 프레임워크가 있음. 여러 플러그인을 함께 사용할 때는 
+            플러그인 간의 충돌이 발생할 수 있음
+            $.noConflict() 충돌을 방지할 때 사용하는 메서드. 더 이상 jQuery식별자 $를 사용할 수 없음
+        */
+        $.noConflict();
+
+        //jQuery식별자를 간단하게 사용하기 위해서 변수선언함
+        var J = jQuery;
+        J(document).ready(function(){
+
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

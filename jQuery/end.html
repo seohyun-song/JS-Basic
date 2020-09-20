@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('h1').css('background','orange');
+            // $('h1:even').css('color','white');
+            // $('h1:odd').css('color','red');
+
+            //end() 문서 객체 선택을 한 단계 뒤로 돌림
+            //end() returns the object to its state before the call to filter().
+            $('h1').css('background','orange').filter(':even').css('color','white').end().filter(':odd').css('color','red');
+        });
+    </script>
+</head>
+<body>
+    <h1>Header - 0</h1>
+    <h1>Header - 1</h1>
+    <h1>Header - 2</h1>
+</body>
+</html>

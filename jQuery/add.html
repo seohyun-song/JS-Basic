@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add() 문서 객체 추가 선택</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //add() 현재 선택한 문서 객체의 범위를 확장시킬 수 있음
+            $('h1').css('background','gray').add('h2').css('float','left');
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h2>Header-1</h2>
+    <h1>Header-2</h1>
+    <h2>Header-3</h2>
+</body>
+</html>

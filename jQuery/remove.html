@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                remove() 문서객체를 제거
+                empty() 선택한 문서 객체의 내부에 들어 있는 모든 문서 객체를 제거함
+            */
+            // $('h1').first().remove();
+            $('div').empty();
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Header-0</h1>
+        <h1>Header-1</h1>
+    </div>
+</body>
+</html>

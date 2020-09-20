@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Move</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        img {width: 200px; height: 120px;}
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //2초마다 문서 객체의 순서를 변경
+            setInterval(function(){
+                $('img').first().appendTo('body');
+            }, 2000);
+            
+        });
+    </script>
+</head>
+<body>
+    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1416&q=80">
+    <img src="https://images.unsplash.com/photo-1577751503801-b70baa35afbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1655&q=80">
+    <img src="https://images.unsplash.com/photo-1523818930026-2486e1878ce2?ixlib=rb-1.2.1&auto=format&fit=crop&w=2891&q=80">
+</body>
+</html>
