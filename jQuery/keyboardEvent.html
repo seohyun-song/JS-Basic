@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+                키보드 이벤트 발생순서
+                1.사용자가 키보드를 누릅니다.
+                2.keydown이벤트가 발생
+                3.글자가 입력됨니다.
+                4.keypress이벤트 발생
+                5.사용자가 키보드에서 손을 뗍니다.
+                6.keyup이벤트가 발생
+
+                *한글은 keypress이벤트를 지원하지 않음
+            */
+            $('textarea').keyup(function(){
+                var inputLength = $(this).val().length;
+                var remain = 150 - inputLength;
+
+                $('h1').html(remain);
+
+                if(remain >= 0){
+                    $('h1').css('color','black');
+                } else {
+                    $('h1').css('color','red');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>지금 내 생각을</p>
+        <h1>150</h1>
+        <textarea cols="70" rows="5"></textarea>
+    </div>
+</body>
+</html>
