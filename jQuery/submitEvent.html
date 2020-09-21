@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Event</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //submit이벤트는 form태그에서 발생하는 이벤트
+            $('#my-form').submit(function(event){
+                var name = $('#name').val();
+                var password = $('#password').val();
+
+                alert(name+': '+password);
+
+                //입력양식의 유효성 검사를 할 때는 기본 이벤트를 제거해야함
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="my-form">
+        <table>
+            <tr>
+                <td>이름: </td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>비밀번호: </td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+        </table>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
