@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Animate()</title>
+    <style>
+        div {
+            width: 50px; height: 50px;
+            background-color: orange;
+            /*
+                위치속성을 변경하는 animate() 메서드를 사용하려면 position 스타일 속성이 
+                absolute 이거나 relative여야 함
+            */
+            position: relative;
+        }
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        /*
+            사용자 정의 효과
+            $(selector).animate(object);
+            $(selector).animate(object, speed);
+            $(selector).animate(object, speed, easing);
+            $(selector).animate(object, speed, easing, callback);
+
+            obj parameter->opacity/ height/ top/ width/ left/ margin/ right/ padding/ bottom
+        */
+        $(document).ready(function(){
+            $('div').hover(function(){
+                $(this).animate({
+                    left: 500
+                },'slow');
+            }, function(){
+                $(this).animate({
+                    left: 0
+                },'slow');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div></div> <div></div>
+    <div></div> <div></div>
+    <div></div> <div></div>
+</body>
+</html>
